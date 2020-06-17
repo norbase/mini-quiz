@@ -25,7 +25,7 @@ let correctAnswers = 0;
 const correct = [];
 const wrong = [];
 
-for (var i = 0; i < questions.length; i++) {
+for (let i = 0; i < questions.length; i++) {
   const question = questions[i][0];
   const answer = questions[i][1];
   let response = prompt(question);
