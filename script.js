@@ -38,7 +38,6 @@ for (let i = 0; i < questions.length; i++) {
     continue;
   }
   
-  
   if (typeof answer === typeof 1) {
     response = parseInt(response);
   }
