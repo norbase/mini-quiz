@@ -1,5 +1,5 @@
 const questions = [
-  ["How many Disney resorts are there in the U.S.?", 2],
+  ["How many Disney resorts are there in the U.S.?", 3],
   ["What is Mickey Mouse's significant other's full name?", "MINNIE MOUSE"],
   ["Who is Goofy's son?", "MAX"],
   ["What animal is Daisy?", "DUCK"],
