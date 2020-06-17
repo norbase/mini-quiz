@@ -14,7 +14,7 @@ function print(message) {
 
 function buildList(arr) {
  let listHTML = '<ol>';
-  for (let i = 0; i < arr.length; i++) {
+  for (var i = 0; i < arr.length; i++) {
     listHTML += '<li>' + arr[i] + '</li>';
   }
   listHTML += '</ol>';
@@ -22,19 +22,30 @@ function buildList(arr) {
 }
 
 let correctAnswers = 0;
-let correct = [];
-let wrong = [];
+const correct = [];
+const wrong = [];
 
-for (let i = 0; i < questions.length; i++) {
-  let question = questions[i][0];
-  let answer = questions[i][1];
+for (var i = 0; i < questions.length; i++) {
+  const question = questions[i][0];
+  const answer = questions[i][1];
   let response = prompt(question);
-  if (typeof answer !== "string") {
+  
+  if (response === null || response === undefined || response === '') {
+    console.log("ERROR:", "User skipped this question: " + question + " Refresh page to try again.")
+    if (response !== answer) {
+      wrong.push(question);
+    }
+    continue;
+  }
+  
+  
+  if (typeof answer === typeof 1) {
     response = parseInt(response);
   }
   if (typeof answer === "string") {
     response = response.toUpperCase();
   }
+  
   if (response === answer) {
     correctAnswers += 1;
     correct.push(question);
