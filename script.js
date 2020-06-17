@@ -8,13 +8,13 @@ const questions = [
 ];
 
 function print(message) {
-  var outputDiv = document.getElementById('output');
+  let outputDiv = document.getElementById('output');
   outputDiv.innerHTML = message;
 }
 
 function buildList(arr) {
- var listHTML = '<ol>';
-  for (var i = 0; i < arr.length; i++) {
+ let listHTML = '<ol>';
+  for (let i = 0; i < arr.length; i++) {
     listHTML += '<li>' + arr[i] + '</li>';
   }
   listHTML += '</ol>';
@@ -25,7 +25,7 @@ let correctAnswers = 0;
 let correct = [];
 let wrong = [];
 
-for (var i = 0; i < questions.length; i++) {
+for (let i = 0; i < questions.length; i++) {
   let question = questions[i][0];
   let answer = questions[i][1];
   let response = prompt(question);
